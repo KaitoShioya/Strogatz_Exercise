@@ -1,0 +1,5 @@
+japanize-matplotlib
+numpy
+matplotlib
+pandas
+tqdm
