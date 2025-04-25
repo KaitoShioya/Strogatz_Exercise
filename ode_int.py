@@ -80,5 +80,5 @@ class NumIntegral:
 
     @property
     def transition_record(self) -> pd.DataFrame:
-        columns = ["x" + str(i) for i in range(1, self.historical_x.shape[-1] + 1)]
-        return pd.DataFrame(self.historical_x, index=self.historical_t, columns=columns)
+        data = {f"x{i}": self.historical_x.T[0][i] for i in range(len(self.historical_x.T[0]))}
+        return pd.DataFrame(data, index=self.historical_t)
